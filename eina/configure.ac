@@ -351,6 +351,8 @@ case "$host_vendor" in
 esac
 
 AC_SUBST([EINA_CFLAGS])
+# We need to set the CFLAGS here if we want the AC_CHECK_HEADERS to find the headers in exotic/escape
+CFLAGS="${CFLAGS} ${EINA_CFLAGS}"
 
 # Check ememoa memory pool library
 
